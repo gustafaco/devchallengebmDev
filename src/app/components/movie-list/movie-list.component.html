@@ -1,0 +1,19 @@
+<h3>Most Popular Movies</h3>
+<div class="row">
+  <div class="col-6 col-sm-4" *ngFor="let item of dataMovie" (click)="onMovieId(item.id)">
+    <mat-card class="example-card" >
+      <mat-card-header>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src='https://image.tmdb.org/t/p/w200/{{item.poster_path}}' alt="">
+      <mat-card-content>
+        <h2>Vote average</h2>
+        <p>
+          {{ item.vote_average }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <br>
+  </div>
+</div>
+

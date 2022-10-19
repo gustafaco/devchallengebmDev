@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Tv Shows Detail - {{ name }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <mat-card class="example-card-detail">
+        <mat-card-title-group>
+          <mat-card-title>{{ name }}</mat-card-title>
+          <mat-card-subtitle>{{tagline}}</mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
+          <div class="row">
+            <div class="col-6">
+              <img mat-card-xl-image src='https://image.tmdb.org/t/p/w200/{{poster_path}}' alt="" >
+            </div>
+            <div class="col-6">
+              <h2>Overview</h2>
+              <h3>{{ overview }}</h3>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row similar">
+    <h1>Similar Tv Shows</h1>
+    <div class="col col-md-2" *ngFor="let item of similarTV">
+      <mat-card class="example-card" >
+        <mat-card-header>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src='https://image.tmdb.org/t/p/w200/{{item.poster_path}}' alt="">
+        <mat-card-content>
+          <h4>Vote average</h4>
+          <p>
+            {{ item.vote_average }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <br>
+    </div>
+  </div>
+</div>
+
