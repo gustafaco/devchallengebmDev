@@ -1,6 +1,6 @@
 # GustavoUrzola
 
-This project is develop to solved the Dev Challenge for Bemobile.
+This project is develop to solved a Dev Challenge.
 
 ## Development server
 
