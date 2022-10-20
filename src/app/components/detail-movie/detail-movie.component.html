@@ -13,10 +13,10 @@
         </mat-card-title-group>
         <mat-card-content>
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
               <img mat-card-xl-image src='https://image.tmdb.org/t/p/w200/{{poster_path}}' alt="" >
             </div>
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
               <h2>Overview</h2>
               <h3>{{ overview }}</h3>
             </div>
@@ -27,17 +27,13 @@
   </div>
   <div class="row similar">
     <h1>Similar Movies</h1>
-    <div class="col col-md-2" *ngFor="let item of similarMovie">
+    <div class="col-6 col-md-2" *ngFor="let item of similarMovie">
       <mat-card class="example-card" >
-        <mat-card-header>
-          <mat-card-title>{{ item.title }}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src='https://image.tmdb.org/t/p/w200/{{item.poster_path}}' alt="">
         <mat-card-content>
-          <h4>Vote average</h4>
-          <p>
-            {{ item.vote_average }}
-          </p>
+          <img mat-card-image src='https://image.tmdb.org/t/p/w200/{{item.poster_path}}' alt="">
+          <h3>
+            {{ item.title }}
+          </h3>
         </mat-card-content>
       </mat-card>
       <br>

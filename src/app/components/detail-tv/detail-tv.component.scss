@@ -9,3 +9,13 @@
   width: auto;
   height: 480px;
 }
+h3{
+  font-weight: bold;
+  color: rgb(50, 50, 50);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+
+}
+
